@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Kush/Desktop/MineSweeper/MineSweeper/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Kush/Desktop/MineSweeper/MineSweeper/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Kush/Desktop/MineSweeper/MineSweeper/app/src/main/res/layout/login.xml" value="0.19427083333333334" />
+        <entry key="..\:/Users/Kush/Desktop/MineSweeper/MineSweeper/app/src/main/res/layout/make_acc.xml" value="0.1" />
+        <entry key="..\:/Users/Kush/Desktop/MineSweeper/MineSweeper/app/src/main/res/layout/map.xml" value="0.1" />
+        <entry key="..\:/Users/Kush/Desktop/MineSweeper/MineSweeper/app/src/main/res/layout/profile.xml" value="0.1" />
+        <entry key="..\:/Users/Kush/Desktop/MineSweeper/MineSweeper/app/src/main/res/layout/reservation.xml" value="0.1" />
+        <entry key="..\:/Users/Kush/Desktop/MineSweeper/MineSweeper/app/src/main/res/layout/two_tab.xml" value="0.19322916666666667" />
       </map>
     </option>
   </component>
