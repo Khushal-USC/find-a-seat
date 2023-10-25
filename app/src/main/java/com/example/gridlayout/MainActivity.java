@@ -1,10 +1,12 @@
+//base imports
 package com.example.gridlayout;
-
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+//other imports under here
+
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,33 +18,37 @@ public class MainActivity extends AppCompatActivity {
 
         // Find all the buttons by their IDs
         Button button1 = findViewById(R.id.button1);
-        button1.setTag("two_tab");
-        Button button2 = findViewById(R.id.button2);
-        button2.setTag("make_acc");
-        Button button3 = findViewById(R.id.button3);
-        button3.setTag("profile");
-        Button button4 = findViewById(R.id.button4);
-        button4.setTag("map");
-        Button button5 = findViewById(R.id.button5);
-        button5.setTag("reservation");
-        Button button6 = findViewById(R.id.button6);
-        button6.setTag("login");
-        Button button7 = findViewById(R.id.button7);
-        Button button8 = findViewById(R.id.button8);
+        button1.setTag(new XMLActivityPair("two_tab", TwoTabMenu.class));
 
+        Button button2 = findViewById(R.id.button2);
+        button2.setTag(new XMLActivityPair("make_acc", null));
+
+        Button button3 = findViewById(R.id.button3);
+        button3.setTag(new XMLActivityPair("profile", null));
+
+        Button button4 = findViewById(R.id.button4);
+        button4.setTag(new XMLActivityPair("map", null));
+
+        Button button5 = findViewById(R.id.button5);
+        button5.setTag(new XMLActivityPair("reservation", null));
+
+        Button button6 = findViewById(R.id.button6);
+        button6.setTag(new XMLActivityPair("login", null));
+
+        Button button7 = findViewById(R.id.button7);
+        button7.setTag(new XMLActivityPair("", null));
+
+        Button button8 = findViewById(R.id.button8);
+        button8.setTag(new XMLActivityPair("", null));
+
+        AppCompatActivity this_class = this;
         // Set a single OnClickListener for all buttons
         View.OnClickListener buttonClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println(" Clicked! ID: " + v.getTag());
-                int layoutId = getResources().getIdentifier((String) v.getTag(), "layout", getPackageName());
+                XMLActivityPair xmlActivityPair = (XMLActivityPair) v.getTag();
+                xmlActivityPair.defaultSwitchToPage(this_class);
 
-                if (layoutId != 0) {
-                    // The layout ID was found
-                    setContentView(layoutId); // Set the content view to the layout
-                } else {
-                    System.out.println("layout not found");
-                }
             }
         };
         // Apply the same click listener to all buttons

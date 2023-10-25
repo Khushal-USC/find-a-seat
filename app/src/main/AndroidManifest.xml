@@ -16,13 +16,25 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="CS 310 Khushal Kalidindi"
+            android:label="CS 310 Long Island Iced SWEs"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".TwoTabMenu"
+            android:label="Two Tab Menu">
+        </activity>
+        <activity
+            android:name=".Map"
+            android:label="Map">
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="Profile">
         </activity>
     </application>
 
