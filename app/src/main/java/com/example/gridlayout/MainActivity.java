@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         button1.setTag(new XMLActivityPair("two_tab", TwoTabMenu.class));
 
         Button button2 = findViewById(R.id.button2);
-        button2.setTag(new XMLActivityPair("make_acc", null));
+        button2.setTag(new XMLActivityPair("registration_page", RegistrationActivity.class));
 
         Button button3 = findViewById(R.id.button3);
-        button3.setTag(new XMLActivityPair("profile", null));
+        button3.setTag(new XMLActivityPair("profile_page", ProfileActivity.class));
 
         Button button4 = findViewById(R.id.button4);
         button4.setTag(new XMLActivityPair("map", null));
@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
         button5.setTag(new XMLActivityPair("reservation", null));
 
         Button button6 = findViewById(R.id.button6);
-        button6.setTag(new XMLActivityPair("login", null));
+        button6.setTag(new XMLActivityPair("login_page", LoginActivity.class));
 
         Button button7 = findViewById(R.id.button7);
-        button7.setTag(new XMLActivityPair("", null));
+        button7.setTag(new XMLActivityPair("registration_page", RegistrationActivity.class));
 
         Button button8 = findViewById(R.id.button8);
-        button8.setTag(new XMLActivityPair("", null));
+        button8.setTag(new XMLActivityPair("login_page", LoginActivity.class));
 
         AppCompatActivity this_class = this;
         // Set a single OnClickListener for all buttons
