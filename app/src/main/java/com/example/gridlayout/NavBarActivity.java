@@ -3,11 +3,8 @@ package com.example.gridlayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -25,7 +22,7 @@ public class NavBarActivity extends AppCompatActivity {
                     startActivity(new Intent(this, Map.class));
                     return true;
                 case R.id.tab_profile:
-                    startActivity(new Intent(this, Profile.class));
+                    startActivity(new Intent(this, ProfileActivity.class));
                     return true;
             }
             return false;
