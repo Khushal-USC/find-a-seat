@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 //other imports under here
 
-public class ProfileActivity extends ProfileSubActivity{
-//public class ProfileActivity extends AppCompatActivity {
+//public class ProfileActivity extends ProfileSubActivity{
+public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
