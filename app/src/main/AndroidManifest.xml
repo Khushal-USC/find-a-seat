@@ -44,6 +44,10 @@
             android:name=".ProfileActivity"
             android:label="Your Profile">
         </activity>
+        <activity
+            android:name=".ReservationActivity"
+            android:label="Your Rervation">
+        </activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/API_Key" />

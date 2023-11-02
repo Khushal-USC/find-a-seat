@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         button4.setTag(new XMLActivityPair("map", Map.class));
 
         Button button5 = findViewById(R.id.button5);
-        button5.setTag(new XMLActivityPair("reservation", null));
+        button5.setTag(new XMLActivityPair("reservation", ReservationActivity.class));
 
         Button button6 = findViewById(R.id.button6);
         button6.setTag(new XMLActivityPair("login_page", LoginActivity.class));
