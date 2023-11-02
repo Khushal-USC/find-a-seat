@@ -3,6 +3,7 @@ package com.example.gridlayout;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,11 +40,38 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.googlemaps_layout);
-
+        AppCompatActivity this_class = this;
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        TextView leftTab = findViewById(R.id.l_tab);
+        TextView rightTab = findViewById(R.id.r_tab);
+
+        // Add click listeners to the TextViews
+        leftTab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle the click on the left tab
+                // For example, switch to a different tab or perform some action
+                // Here, we'll show a toast message as an example
+                System.out.println("LEFT TAB CLICKED");
+                Intent intent = new Intent(this_class, Map.class);
+                this_class.startActivity(intent);
+            }
+        });
+
+        rightTab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle the click on the right tab
+                // For example, switch to a different tab or perform some action
+                // Here, we'll show a toast message as an example
+                System.out.println("RIGHT TAB CLICKED");
+                Intent intent = new Intent(this_class, ProfileActivity.class);
+                this_class.startActivity(intent);
+            }
+        });
     }
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         ImageView imageView;
@@ -163,7 +191,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
                 popupTitle.setText(marker.getTitle());
 
                 // Define the image URL (replace with your actual image URL)
-                String dohenny = "https://kckarchitects.com/wp-content/uploads/2015/09/doheny.jpg";
+                String dohenny = "https://libraries.usc.edu/sites/default/files/styles/16_9_large_2x/public/2019-08/dml-front.jpg?itok=nPHy_km1";
                 String leviathan = "https://libraries.usc.edu/sites/default/files/styles/16_9_large_2x/public/2019-07/leavey-dsc_0106.jpg?itok=5SPgA4w-";
                 String fertits = "https://today.usc.edu/wp-content/uploads/2016/09/Fertitta_toned_web2-1280x720.jpg";
 

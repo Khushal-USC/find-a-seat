@@ -18,11 +18,6 @@ public class TwoTabMenu extends NavBarActivity {
         setContentView(R.layout.two_tab);
         super.onCreate(savedInstanceState);
         // Get a reference to the ViewModel
-
-
-
     }
-
-
 }
 
