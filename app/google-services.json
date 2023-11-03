@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "13168368943",
+    "firebase_url": "https://find-a-seat-1bc2b-default-rtdb.firebaseio.com/",
+    "project_id": "find-a-seat-1bc2b",
+    "storage_bucket": "find-a-seat-1bc2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13168368943:android:c9ec12406803f0e801d5da",
+        "android_client_info": {
+          "package_name": "com.example.gridlayout"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsLOeNr9RQOg5CTuwkWQN5jQzVYWJ8ksc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

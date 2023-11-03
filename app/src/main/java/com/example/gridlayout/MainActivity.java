@@ -8,11 +8,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.widget.Button;
 
+import com.google.firebase.FirebaseApp;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_main); // Set the layout resource
         View parentLayout = findViewById(R.id.parentView);
 
