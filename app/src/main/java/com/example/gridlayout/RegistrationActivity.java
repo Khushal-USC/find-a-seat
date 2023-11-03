@@ -12,8 +12,15 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
@@ -41,6 +48,9 @@ public class RegistrationActivity extends AppCompatActivity {
     private TextView errorName;
     private TextView errorID;
     private TextView errorAffiliation;
+
+    FirebaseDatabase rootNode;
+    DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,9 +114,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 String grabName = nameInput.getText().toString();
                 String grabID = idInput.getText().toString();
 
+                boolean isError = false;
                 if(!checkPasswordGood(grabPassword)){
                     errorPassword.setText("Invalid Password Input");
                     errorPassword.setTextColor(Color.RED);
+                    isError = true;
                 }else{
                     errorPassword.setTextColor(Color.WHITE);
                 }
@@ -116,11 +128,13 @@ public class RegistrationActivity extends AppCompatActivity {
                 }else{
                     errorID.setText("Invalid ID");
                     errorID.setTextColor(Color.RED);
+                    isError = true;
                 }
 
                 if(grabName.length() == 0){
                     errorName.setText("Invalid Input");
                     errorName.setTextColor(Color.RED);
+                    isError = true;
                 }else{
                     errorName.setTextColor(Color.WHITE);
                 }
@@ -130,18 +144,38 @@ public class RegistrationActivity extends AppCompatActivity {
                 }else{
                     errorEmail.setText("Invalid Email");
                     errorEmail.setTextColor(Color.RED);
+                    isError = true;
+
                 }
 
                 if((String) spinner.getSelectedItem() == "Select:"){
                     errorAffiliation.setText("Please Select An Affiliation");
                     errorAffiliation.setTextColor(Color.RED);
+                    isError = true;
                 }else{
                     errorAffiliation.setTextColor(Color.WHITE);
                 }
+              
+                if(!isError){
+                    rootNode = FirebaseDatabase.getInstance("https://find-a-seat-1bc2b-default-rtdb.firebaseio.com/");
+                    ref = rootNode.getReference("users");
+
+                    User new_user = new User(Integer.parseInt(grabID),grabName,"",(String) spinner.getSelectedItem(),null);
+                    addUser(ref, grabID, new_user);
+                    System.out.println("USER ADDED");
+                }
+
                 Intent intent = new Intent(this_class,Map.class);
                 this_class.startActivity(intent);
             }
         });
+
+    }
+
+    private static void addUser(DatabaseReference usersRef, String userId, User user) {
+        System.out.println("ADDING USER3");
+        DatabaseReference userRef = usersRef.child(userId);
+        System.out.println(userRef.setValue(user).isSuccessful());
 
     }
 
