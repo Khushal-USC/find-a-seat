@@ -1,5 +1,6 @@
 package com.example.gridlayout;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText passwordText;
 
     private Button submitter;
+    private Button goBack;
 
     private TextView error;
 
@@ -33,9 +35,20 @@ public class LoginActivity extends AppCompatActivity {
         passwordText = findViewById(R.id.editTextText3);
 
         submitter = findViewById(R.id.button3);
+        goBack = findViewById(R.id.button10);
 
         error = findViewById(R.id.textView16);
         error.setTextColor(Color.WHITE);
+
+        AppCompatActivity this_class = this;
+
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(this_class,Map.class);
+                this_class.startActivity(intent);
+            }
+        });
 
         submitter.setOnClickListener(new View.OnClickListener(){
            @Override
@@ -66,11 +79,12 @@ public class LoginActivity extends AppCompatActivity {
                    error.setTextColor(Color.RED);
                }else{
                    error.setTextColor(Color.WHITE);
+                   Intent intent = new Intent(this_class,Map.class);
+                   this_class.startActivity(intent);
                }
 
            }
         });
-
     }
 
     boolean checkPasswordGood(String s){

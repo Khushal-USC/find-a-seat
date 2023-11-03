@@ -41,6 +41,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText idInput;
 
     private Button submission;
+    private Button goBack;
 
     private TextView errorEmail;
     private TextView errorPassword;
@@ -72,6 +73,7 @@ public class RegistrationActivity extends AppCompatActivity {
         idInput = findViewById(R.id.editTextText6);
 
         submission = findViewById(R.id.button2);
+        goBack = findViewById(R.id.button9);
 
         errorEmail = findViewById(R.id.textView19);
         errorPassword = findViewById(R.id.textView20);
@@ -84,6 +86,8 @@ public class RegistrationActivity extends AppCompatActivity {
         errorName.setTextColor(Color.WHITE);
         errorID.setTextColor(Color.WHITE);
 
+        AppCompatActivity this_class = this;
+
         buttonGallery.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -91,6 +95,14 @@ public class RegistrationActivity extends AppCompatActivity {
                 iGallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(iGallery, GALLERY_REQ_CODE);
 
+            }
+        });
+
+        goBack.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(this_class,Map.class);
+                this_class.startActivity(intent);
             }
         });
 
@@ -143,6 +155,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 }else{
                     errorAffiliation.setTextColor(Color.WHITE);
                 }
+              
                 if(!isError){
                     rootNode = FirebaseDatabase.getInstance("https://find-a-seat-1bc2b-default-rtdb.firebaseio.com/");
                     ref = rootNode.getReference("users");
@@ -152,9 +165,10 @@ public class RegistrationActivity extends AppCompatActivity {
                     System.out.println("USER ADDED");
                 }
 
+                Intent intent = new Intent(this_class,Map.class);
+                this_class.startActivity(intent);
             }
         });
-
 
     }
 
