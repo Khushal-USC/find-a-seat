@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Text;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,10 +32,10 @@ public class LoginActivity extends AppCompatActivity {
         emailText = findViewById(R.id.editTextText2);
         passwordText = findViewById(R.id.editTextText3);
 
-        submitter = findViewById(R.id.button3);
-        goBack = findViewById(R.id.button10);
+        submitter = findViewById(R.id.login_submit_tv);
+        goBack = findViewById(R.id.login_goback_tv);
 
-        error = findViewById(R.id.textView16);
+        error = findViewById(R.id.login_error_tv);
         error.setTextColor(Color.WHITE);
 
         AppCompatActivity this_class = this;

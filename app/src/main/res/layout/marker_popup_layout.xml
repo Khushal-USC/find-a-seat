@@ -85,7 +85,7 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/reg_submit_tv"
         android:layout_width="48dp"
         android:layout_height="58dp"
         android:layout_marginStart="267dp"

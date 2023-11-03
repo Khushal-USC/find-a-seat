@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:text="Profile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button1" />
+        app:layout_constraintTop_toBottomOf="@id/button7" />
 
     <!-- Button 4 -->
     <Button
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="Map"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button2" />
+        app:layout_constraintTop_toBottomOf="@id/button1" />
 
     <!-- Button 5 -->
     <Button
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:text="Reservation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button3" />
+        app:layout_constraintTop_toBottomOf="@id/button2" />
 
     <!-- Button 6 -->
     <Button

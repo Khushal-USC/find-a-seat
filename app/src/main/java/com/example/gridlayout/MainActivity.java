@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         View parentLayout = findViewById(R.id.parentView);
 
         // Find all the buttons by their IDs
-        Button button1 = findViewById(R.id.button1);
-        button1.setTag(new XMLActivityPair("two_tab", TwoTabMenu.class));
+//        Button button1 = findViewById(R.id.button1);
+//        button1.setTag(new XMLActivityPair("two_tab", TwoTabMenu.class));
 
         Button button2 = findViewById(R.id.button2);
         button2.setTag(new XMLActivityPair("registration_page", RegistrationActivity.class));
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         // Apply the same click listener to all buttons
-        button1.setOnClickListener(buttonClickListener);
+        //button1.setOnClickListener(buttonClickListener);
         button2.setOnClickListener(buttonClickListener);
         button3.setOnClickListener(buttonClickListener);
         button4.setOnClickListener(buttonClickListener);

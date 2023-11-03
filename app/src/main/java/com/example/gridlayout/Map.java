@@ -159,7 +159,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
                 TextView popupTitle = customView.findViewById(R.id.popup_title);
                 Button option1Button = customView.findViewById(R.id.popup_option1);
                 Button option2Button = customView.findViewById(R.id.popup_option2);
-                Button button2 = customView.findViewById(R.id.button2);
+                Button button2 = customView.findViewById(R.id.reg_submit_tv);
                 ImageView popupImage = customView.findViewById(R.id.imageView3);
 
                 // Set click listeners for the buttons in the popup menu

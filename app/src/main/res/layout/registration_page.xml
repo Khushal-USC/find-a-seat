@@ -30,7 +30,7 @@
         android:text="Your Password"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText4"
+        app:layout_constraintEnd_toStartOf="@+id/reg_password_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -56,7 +56,7 @@
         android:text="Your Full Name"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText5"
+        app:layout_constraintEnd_toStartOf="@+id/reg_name_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -70,7 +70,7 @@
         android:text="10 Digit USC ID"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText6"
+        app:layout_constraintEnd_toStartOf="@+id/reg_id_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -101,47 +101,47 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/reg_email_error_tv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="33dp"
         android:text="TextView"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_email_tv" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/reg_password_error_tv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="33dp"
         android:text="TextView"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_password_tv" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/reg_name_error_tv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="33dp"
         android:text="TextView"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_name_tv" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/reg_id_error_tv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="33dp"
         android:text="TextView"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_id_tv" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/reg_affiliation_error_tv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="33dp"
@@ -151,7 +151,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/reg_email_tv"
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginStart="18dp"
@@ -169,7 +169,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/reg_password_tv"
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginStart="18dp"
@@ -183,10 +183,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_email_tv" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/reg_name_tv"
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginStart="178dp"
@@ -199,10 +199,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_password_tv" />
 
     <EditText
-        android:id="@+id/editTextText6"
+        android:id="@+id/reg_id_tv"
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginStart="178dp"
@@ -214,7 +214,7 @@
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_name_tv" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -225,7 +225,7 @@
         android:layout_marginEnd="33dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_id_tv" />
 
     <Button
         android:id="@+id/button"
@@ -240,7 +240,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/reg_submit_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -250,12 +250,12 @@
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/reg_goback_tv"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="-220dp"
         android:text="X"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText"
+        app:layout_constraintEnd_toStartOf="@+id/reg_email_tv"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView

@@ -12,17 +12,11 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.w3c.dom.Text;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -67,19 +61,19 @@ public class RegistrationActivity extends AppCompatActivity {
 
         spinner.setAdapter(adapter);
 
-        emailInput = findViewById(R.id.editTextText);
-        passwordInput = findViewById(R.id.editTextText4);
-        nameInput = findViewById(R.id.editTextText5);
-        idInput = findViewById(R.id.editTextText6);
+        emailInput = findViewById(R.id.reg_email_tv);
+        passwordInput = findViewById(R.id.reg_password_tv);
+        nameInput = findViewById(R.id.reg_name_tv);
+        idInput = findViewById(R.id.reg_id_tv);
 
-        submission = findViewById(R.id.button2);
-        goBack = findViewById(R.id.button9);
+        submission = findViewById(R.id.reg_submit_tv);
+        goBack = findViewById(R.id.reg_goback_tv);
 
-        errorEmail = findViewById(R.id.textView19);
-        errorPassword = findViewById(R.id.textView20);
-        errorName = findViewById(R.id.textView21);
-        errorID = findViewById(R.id.textView22);
-        errorAffiliation = findViewById(R.id.textView23);
+        errorEmail = findViewById(R.id.reg_email_error_tv);
+        errorPassword = findViewById(R.id.reg_password_error_tv);
+        errorName = findViewById(R.id.reg_name_error_tv);
+        errorID = findViewById(R.id.reg_id_error_tv);
+        errorAffiliation = findViewById(R.id.reg_affiliation_error_tv);
 
         errorEmail.setTextColor(Color.WHITE);
         errorPassword.setTextColor(Color.WHITE);
@@ -163,10 +157,11 @@ public class RegistrationActivity extends AppCompatActivity {
                     User new_user = new User(Integer.parseInt(grabID),grabName,"",(String) spinner.getSelectedItem(),null);
                     addUser(ref, grabID, new_user);
                     System.out.println("USER ADDED");
+                    Intent intent = new Intent(this_class,Map.class);
+                    this_class.startActivity(intent);
                 }
 
-                Intent intent = new Intent(this_class,Map.class);
-                this_class.startActivity(intent);
+
             }
         });
 
